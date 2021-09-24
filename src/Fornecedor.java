@@ -14,11 +14,6 @@ public class Fornecedor extends Pessoa {
         return saldoCreditoDivida;
     }
 
-    public Fornecedor(double valorCredito, double valorDivida) {
-        this.valorCredito = valorCredito;
-        this.valorDivida = valorDivida;
-    }
-
     public double getValorCredito() {
         return valorCredito;
     }
@@ -32,6 +27,11 @@ public class Fornecedor extends Pessoa {
     }
 
     public void setValorDivida(double valorDivida) {
-        this.valorDivida = valorDivida;
+        if (valorDivida > obterSaldo()){
+            System.out.println("Valor da dívida maior que o saldo dísponível. Solicite um novo crédito.");
+        }else {
+            this.valorDivida = valorDivida;
+        }
     }
+
 }
