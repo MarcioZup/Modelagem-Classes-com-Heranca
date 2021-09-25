@@ -21,6 +21,12 @@ public class Main {
         colaborador1.calculaSalario();
         System.out.println("O salário líquido do colaborador é R$ " + colaborador1.calculaSalario());
 
+        //Intanciando classe Administrador
+        Administrador administrador1 = new Administrador("Rui", "Avenida da Nações", "83-98506-9988", 500, 50000, 0.15, 1000);
+        System.out.println("O salário bruto do Administrador é R$ " + administrador1.getSalarioBase());
+        administrador1.calculaSalario();
+        System.out.println("O salário líquido do Administrador " + administrador1.getNome() + " é R$ " + administrador1.calculaSalario());
+
 
     }
 }
